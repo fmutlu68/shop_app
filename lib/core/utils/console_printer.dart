@@ -5,7 +5,7 @@ class ConsolePrinter {
 
   void printError(String errorMessage, {String? method, String? errorName}) {
     print('''
-      \t\t\t----ERROR----
+      ----ERROR----
       Method Name: $method
       Error Details : {
         Name: $errorName
