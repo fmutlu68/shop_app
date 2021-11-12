@@ -16,22 +16,12 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$NavigationRouteTearOff {
   const _$NavigationRouteTearOff();
 
-  NavigationRouteHome navigateToHome(Widget screen) {
-    return NavigationRouteHome(
-      screen,
-    );
+  NavigationRouteOnboard navigateToOnboard() {
+    return const NavigationRouteOnboard();
   }
 
-  NavigationRoutePayment navigateToPayment(Widget screen) {
-    return NavigationRoutePayment(
-      screen,
-    );
-  }
-
-  NavigationRouteOnboard navigateToOnboard(OnboardView? view) {
-    return NavigationRouteOnboard(
-      view,
-    );
+  NavigationRouteLogin navigateToLogin() {
+    return const NavigationRouteLogin();
   }
 }
 
@@ -42,31 +32,27 @@ const $NavigationRoute = _$NavigationRouteTearOff();
 mixin _$NavigationRoute {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Widget screen) navigateToHome,
-    required TResult Function(Widget screen) navigateToPayment,
-    required TResult Function(OnboardView? view) navigateToOnboard,
+    required TResult Function() navigateToOnboard,
+    required TResult Function() navigateToLogin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Widget screen)? navigateToHome,
-    TResult Function(Widget screen)? navigateToPayment,
-    TResult Function(OnboardView? view)? navigateToOnboard,
+    TResult Function()? navigateToOnboard,
+    TResult Function()? navigateToLogin,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(NavigationRouteHome value) navigateToHome,
-    required TResult Function(NavigationRoutePayment value) navigateToPayment,
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(NavigationRouteHome value)? navigateToHome,
-    TResult Function(NavigationRoutePayment value)? navigateToPayment,
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -90,253 +76,10 @@ class _$NavigationRouteCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $NavigationRouteHomeCopyWith<$Res> {
-  factory $NavigationRouteHomeCopyWith(
-          NavigationRouteHome value, $Res Function(NavigationRouteHome) then) =
-      _$NavigationRouteHomeCopyWithImpl<$Res>;
-  $Res call({Widget screen});
-}
-
-/// @nodoc
-class _$NavigationRouteHomeCopyWithImpl<$Res>
-    extends _$NavigationRouteCopyWithImpl<$Res>
-    implements $NavigationRouteHomeCopyWith<$Res> {
-  _$NavigationRouteHomeCopyWithImpl(
-      NavigationRouteHome _value, $Res Function(NavigationRouteHome) _then)
-      : super(_value, (v) => _then(v as NavigationRouteHome));
-
-  @override
-  NavigationRouteHome get _value => super._value as NavigationRouteHome;
-
-  @override
-  $Res call({
-    Object? screen = freezed,
-  }) {
-    return _then(NavigationRouteHome(
-      screen == freezed
-          ? _value.screen
-          : screen // ignore: cast_nullable_to_non_nullable
-              as Widget,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$NavigationRouteHome implements NavigationRouteHome {
-  const _$NavigationRouteHome(this.screen);
-
-  @override
-  final Widget screen;
-
-  @override
-  String toString() {
-    return 'NavigationRoute.navigateToHome(screen: $screen)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is NavigationRouteHome &&
-            (identical(other.screen, screen) ||
-                const DeepCollectionEquality().equals(other.screen, screen)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(screen);
-
-  @JsonKey(ignore: true)
-  @override
-  $NavigationRouteHomeCopyWith<NavigationRouteHome> get copyWith =>
-      _$NavigationRouteHomeCopyWithImpl<NavigationRouteHome>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(Widget screen) navigateToHome,
-    required TResult Function(Widget screen) navigateToPayment,
-    required TResult Function(OnboardView? view) navigateToOnboard,
-  }) {
-    return navigateToHome(screen);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Widget screen)? navigateToHome,
-    TResult Function(Widget screen)? navigateToPayment,
-    TResult Function(OnboardView? view)? navigateToOnboard,
-    required TResult orElse(),
-  }) {
-    if (navigateToHome != null) {
-      return navigateToHome(screen);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NavigationRouteHome value) navigateToHome,
-    required TResult Function(NavigationRoutePayment value) navigateToPayment,
-    required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
-  }) {
-    return navigateToHome(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NavigationRouteHome value)? navigateToHome,
-    TResult Function(NavigationRoutePayment value)? navigateToPayment,
-    TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
-    required TResult orElse(),
-  }) {
-    if (navigateToHome != null) {
-      return navigateToHome(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NavigationRouteHome implements NavigationRoute {
-  const factory NavigationRouteHome(Widget screen) = _$NavigationRouteHome;
-
-  Widget get screen => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $NavigationRouteHomeCopyWith<NavigationRouteHome> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $NavigationRoutePaymentCopyWith<$Res> {
-  factory $NavigationRoutePaymentCopyWith(NavigationRoutePayment value,
-          $Res Function(NavigationRoutePayment) then) =
-      _$NavigationRoutePaymentCopyWithImpl<$Res>;
-  $Res call({Widget screen});
-}
-
-/// @nodoc
-class _$NavigationRoutePaymentCopyWithImpl<$Res>
-    extends _$NavigationRouteCopyWithImpl<$Res>
-    implements $NavigationRoutePaymentCopyWith<$Res> {
-  _$NavigationRoutePaymentCopyWithImpl(NavigationRoutePayment _value,
-      $Res Function(NavigationRoutePayment) _then)
-      : super(_value, (v) => _then(v as NavigationRoutePayment));
-
-  @override
-  NavigationRoutePayment get _value => super._value as NavigationRoutePayment;
-
-  @override
-  $Res call({
-    Object? screen = freezed,
-  }) {
-    return _then(NavigationRoutePayment(
-      screen == freezed
-          ? _value.screen
-          : screen // ignore: cast_nullable_to_non_nullable
-              as Widget,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$NavigationRoutePayment implements NavigationRoutePayment {
-  const _$NavigationRoutePayment(this.screen);
-
-  @override
-  final Widget screen;
-
-  @override
-  String toString() {
-    return 'NavigationRoute.navigateToPayment(screen: $screen)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is NavigationRoutePayment &&
-            (identical(other.screen, screen) ||
-                const DeepCollectionEquality().equals(other.screen, screen)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(screen);
-
-  @JsonKey(ignore: true)
-  @override
-  $NavigationRoutePaymentCopyWith<NavigationRoutePayment> get copyWith =>
-      _$NavigationRoutePaymentCopyWithImpl<NavigationRoutePayment>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(Widget screen) navigateToHome,
-    required TResult Function(Widget screen) navigateToPayment,
-    required TResult Function(OnboardView? view) navigateToOnboard,
-  }) {
-    return navigateToPayment(screen);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Widget screen)? navigateToHome,
-    TResult Function(Widget screen)? navigateToPayment,
-    TResult Function(OnboardView? view)? navigateToOnboard,
-    required TResult orElse(),
-  }) {
-    if (navigateToPayment != null) {
-      return navigateToPayment(screen);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NavigationRouteHome value) navigateToHome,
-    required TResult Function(NavigationRoutePayment value) navigateToPayment,
-    required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
-  }) {
-    return navigateToPayment(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NavigationRouteHome value)? navigateToHome,
-    TResult Function(NavigationRoutePayment value)? navigateToPayment,
-    TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
-    required TResult orElse(),
-  }) {
-    if (navigateToPayment != null) {
-      return navigateToPayment(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NavigationRoutePayment implements NavigationRoute {
-  const factory NavigationRoutePayment(Widget screen) =
-      _$NavigationRoutePayment;
-
-  Widget get screen => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $NavigationRoutePaymentCopyWith<NavigationRoutePayment> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
 abstract class $NavigationRouteOnboardCopyWith<$Res> {
   factory $NavigationRouteOnboardCopyWith(NavigationRouteOnboard value,
           $Res Function(NavigationRouteOnboard) then) =
       _$NavigationRouteOnboardCopyWithImpl<$Res>;
-  $Res call({OnboardView? view});
 }
 
 /// @nodoc
@@ -349,71 +92,44 @@ class _$NavigationRouteOnboardCopyWithImpl<$Res>
 
   @override
   NavigationRouteOnboard get _value => super._value as NavigationRouteOnboard;
-
-  @override
-  $Res call({
-    Object? view = freezed,
-  }) {
-    return _then(NavigationRouteOnboard(
-      view == freezed
-          ? _value.view
-          : view // ignore: cast_nullable_to_non_nullable
-              as OnboardView?,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$NavigationRouteOnboard implements NavigationRouteOnboard {
-  const _$NavigationRouteOnboard(this.view);
-
-  @override
-  final OnboardView? view;
+  const _$NavigationRouteOnboard();
 
   @override
   String toString() {
-    return 'NavigationRoute.navigateToOnboard(view: $view)';
+    return 'NavigationRoute.navigateToOnboard()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is NavigationRouteOnboard &&
-            (identical(other.view, view) ||
-                const DeepCollectionEquality().equals(other.view, view)));
+    return identical(this, other) || (other is NavigationRouteOnboard);
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(view);
-
-  @JsonKey(ignore: true)
-  @override
-  $NavigationRouteOnboardCopyWith<NavigationRouteOnboard> get copyWith =>
-      _$NavigationRouteOnboardCopyWithImpl<NavigationRouteOnboard>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Widget screen) navigateToHome,
-    required TResult Function(Widget screen) navigateToPayment,
-    required TResult Function(OnboardView? view) navigateToOnboard,
+    required TResult Function() navigateToOnboard,
+    required TResult Function() navigateToLogin,
   }) {
-    return navigateToOnboard(view);
+    return navigateToOnboard();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Widget screen)? navigateToHome,
-    TResult Function(Widget screen)? navigateToPayment,
-    TResult Function(OnboardView? view)? navigateToOnboard,
+    TResult Function()? navigateToOnboard,
+    TResult Function()? navigateToLogin,
     required TResult orElse(),
   }) {
     if (navigateToOnboard != null) {
-      return navigateToOnboard(view);
+      return navigateToOnboard();
     }
     return orElse();
   }
@@ -421,9 +137,8 @@ class _$NavigationRouteOnboard implements NavigationRouteOnboard {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(NavigationRouteHome value) navigateToHome,
-    required TResult Function(NavigationRoutePayment value) navigateToPayment,
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
   }) {
     return navigateToOnboard(this);
   }
@@ -431,9 +146,8 @@ class _$NavigationRouteOnboard implements NavigationRouteOnboard {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(NavigationRouteHome value)? navigateToHome,
-    TResult Function(NavigationRoutePayment value)? navigateToPayment,
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
     required TResult orElse(),
   }) {
     if (navigateToOnboard != null) {
@@ -444,11 +158,91 @@ class _$NavigationRouteOnboard implements NavigationRouteOnboard {
 }
 
 abstract class NavigationRouteOnboard implements NavigationRoute {
-  const factory NavigationRouteOnboard(OnboardView? view) =
-      _$NavigationRouteOnboard;
+  const factory NavigationRouteOnboard() = _$NavigationRouteOnboard;
+}
 
-  OnboardView? get view => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $NavigationRouteOnboardCopyWith<NavigationRouteOnboard> get copyWith =>
-      throw _privateConstructorUsedError;
+/// @nodoc
+abstract class $NavigationRouteLoginCopyWith<$Res> {
+  factory $NavigationRouteLoginCopyWith(NavigationRouteLogin value,
+          $Res Function(NavigationRouteLogin) then) =
+      _$NavigationRouteLoginCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$NavigationRouteLoginCopyWithImpl<$Res>
+    extends _$NavigationRouteCopyWithImpl<$Res>
+    implements $NavigationRouteLoginCopyWith<$Res> {
+  _$NavigationRouteLoginCopyWithImpl(
+      NavigationRouteLogin _value, $Res Function(NavigationRouteLogin) _then)
+      : super(_value, (v) => _then(v as NavigationRouteLogin));
+
+  @override
+  NavigationRouteLogin get _value => super._value as NavigationRouteLogin;
+}
+
+/// @nodoc
+
+class _$NavigationRouteLogin implements NavigationRouteLogin {
+  const _$NavigationRouteLogin();
+
+  @override
+  String toString() {
+    return 'NavigationRoute.navigateToLogin()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is NavigationRouteLogin);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() navigateToOnboard,
+    required TResult Function() navigateToLogin,
+  }) {
+    return navigateToLogin();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? navigateToOnboard,
+    TResult Function()? navigateToLogin,
+    required TResult orElse(),
+  }) {
+    if (navigateToLogin != null) {
+      return navigateToLogin();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
+  }) {
+    return navigateToLogin(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
+    required TResult orElse(),
+  }) {
+    if (navigateToLogin != null) {
+      return navigateToLogin(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NavigationRouteLogin implements NavigationRoute {
+  const factory NavigationRouteLogin() = _$NavigationRouteLogin;
 }

@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:fluttter_shop_app/core/base/state/base_view_state.dart';
 import 'package:fluttter_shop_app/core/base/widget/base_view.dart';
+import 'package:fluttter_shop_app/core/components/button/impl/text_button.dart';
+import 'package:fluttter_shop_app/core/components/list_view/indicator_list_view.dart';
+import 'package:fluttter_shop_app/core/entities/components/button/style_types/text_button_style.dart';
+import 'package:fluttter_shop_app/core/extensions/dynamic_size_extension.dart';
+import 'package:fluttter_shop_app/core/extensions/spacer_extension.dart';
 import 'package:fluttter_shop_app/core/extensions/theme_extension.dart';
+import 'package:fluttter_shop_app/core/start/navigation/routes/navigation_route.dart';
+import 'package:fluttter_shop_app/production/enum/app_colors_enum.dart';
 import 'package:fluttter_shop_app/view/authenticate/onboard/view_model/onboard_view_model.dart';
+
+part '../components/onboard_image_view.dart';
+part '../components/onboard_list_indicator.dart';
+part '../components/onboard_next_button.dart';
 
 class OnboardView extends StatefulWidget {
   OnboardView({Key? key}) : super(key: key);
@@ -19,9 +31,9 @@ class _OnboardViewState extends BaseViewState<OnboardView> {
     return BaseView<OnboardViewModel>(
       viewModel: OnboardViewModel(),
       onModelReady: (model) {
-        viewModel = model;
-        viewModel.setContext(context);
-        viewModel.init();
+        this.viewModel = model;
+        this.viewModel.setContext(context);
+        this.viewModel.init();
       },
       onPageBuilder: (context, model) => Scaffold(
         appBar: appBar,
@@ -51,21 +63,60 @@ class _OnboardViewState extends BaseViewState<OnboardView> {
 
   Widget get buildContent => Column(
         children: [
-          buildOnboardImage,
-          buildOnboardTitle,
-          buildOnboardSubtitle,
-          buildIndicatorList,
+          buildPageView,
+          buildIndicator,
           buildNextButton,
         ],
       );
 
-  get buildOnboardImage => null;
+  Widget get buildPageView => Container(
+        height: calculateDynamicHeight(53),
+        child: PageView.builder(
+          itemBuilder: buildItem,
+          itemCount: viewModel.onboardModels.length,
+          onPageChanged: (page) {
+            viewModel.setIndex(page);
+          },
+        ),
+      );
 
-  get buildOnboardTitle => null;
+  Widget buildItem(BuildContext context, int index) {
+    return Column(
+      children: [
+        buildOnboardImage,
+        context.veryLowHeightSpacer,
+        buildOnboardTitle,
+        context.veryLowHeightSpacer,
+        buildOnboardSubtitle,
+      ],
+    );
+  }
 
-  get buildOnboardSubtitle => null;
+  get buildOnboardImage => Observer(
+        builder: (_) {
+          return buildImage(
+            imagePath: viewModel.onboardModel.imagePath,
+          );
+        },
+      );
+  get buildOnboardTitle => Observer(
+        builder: (_) => Text(
+          viewModel.onboardModel.title,
+          style: context.textTheme.headline5!.copyWith(
+              fontWeight: FontWeight.bold, color: context.colors.background),
+        ),
+      );
 
-  get buildIndicatorList => null;
+  get buildOnboardSubtitle => Observer(
+        builder: (_) => Text(
+          viewModel.onboardModel.subtitle,
+          style: context.textTheme.subtitle2!.copyWith(
+            fontWeight: FontWeight.w200,
+          ),
+        ),
+      );
 
-  get buildNextButton => null;
+  // get buildIndicatorList => null;
+
+  // get buildNextButton => null;
 }

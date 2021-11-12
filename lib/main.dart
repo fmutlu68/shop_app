@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:fluttter_shop_app/core/start/cache/local_cache_manager.dart';
+import 'package:fluttter_shop_app/core/start/dependency_injection/dependency_injection_container.dart';
 import 'package:fluttter_shop_app/core/start/navigation/router/navigation_router.dart';
 import 'package:fluttter_shop_app/core/start/navigation/service/navigation_service.dart';
 import 'package:fluttter_shop_app/core/start/notifier/ProviderInitializer.dart';
@@ -15,6 +16,7 @@ import 'core/utils/console_printer.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await LocalCacheManager.instance.initCacheService();
+  setupContainer();
   FlutterError.onError = (FlutterErrorDetails errorDetails) {
     print("======= Flutter Error =======");
     ConsolePrinter.shared.printError(
@@ -22,7 +24,7 @@ Future<void> main() async {
       errorName: errorDetails.exception.runtimeType.toString(),
     );
     print(errorDetails.exception.runtimeType);
-    print("${errorDetails.exception}\n\n");
+    print("${errorDetails.library}\n\n");
   };
   runZonedGuarded(
       () => runApp(

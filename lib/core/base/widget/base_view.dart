@@ -22,11 +22,9 @@ class BaseView<TViewModel extends Store> extends StatefulWidget {
 
 class _BaseViewState<TViewModel extends Store>
     extends State<BaseView<TViewModel>> {
-  late TViewModel viewModel;
   @override
   void initState() {
-    viewModel = widget.viewModel;
-    widget.onModelReady(viewModel);
+    widget.onModelReady(widget.viewModel);
     super.initState();
   }
 
@@ -39,7 +37,7 @@ class _BaseViewState<TViewModel extends Store>
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      child: widget.onPageBuilder(context, viewModel),
+      child: widget.onPageBuilder(context, widget.viewModel),
       onWillPop: widget.onWillPop,
     );
   }

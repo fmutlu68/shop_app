@@ -4,7 +4,7 @@ import 'package:fluttter_shop_app/core/extensions/dynamic_size_extension.dart';
 class IndicatorListView extends StatelessWidget {
   final int currentIndex;
   final int indicatorCount;
-  final void Function(int newIndex) onIndicatorChanged;
+  final double? radius;
   final Axis indicatorListDirection;
   final Color unselectedIndicatorColor;
   final Color selectedIndicatorColor;
@@ -13,30 +13,36 @@ class IndicatorListView extends StatelessWidget {
     Key? key,
     required this.currentIndex,
     required this.indicatorCount,
-    required this.onIndicatorChanged,
     this.indicatorListDirection = Axis.horizontal,
-    this.unselectedIndicatorColor = const Color(0xff69A03A),
+    this.unselectedIndicatorColor = Colors.transparent,
     this.selectedIndicatorColor = Colors.transparent,
     this.indicatorChildBuilder,
+    this.radius,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: indicatorCount,
-      itemBuilder: buildIndicator,
+      itemBuilder: buildAvatar,
       scrollDirection: indicatorListDirection,
+      shrinkWrap: true,
     );
   }
 
-  Widget buildIndicator(BuildContext context, int index) {
-    return CircleAvatar(
-      backgroundColor: currentIndex == index
-          ? selectedIndicatorColor
-          : unselectedIndicatorColor,
-      radius: context.lowWidth,
-      child:
-          (indicatorChildBuilder ?? (_, __) {})(context, currentIndex == index),
+  Padding buildAvatar(BuildContext context, int index) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 10),
+      child: CircleAvatar(
+        radius: radius ?? context.lowWidth,
+        backgroundColor: currentIndex == index
+            ? selectedIndicatorColor
+            : unselectedIndicatorColor == Colors.transparent
+                ? selectedIndicatorColor.withOpacity(0.3)
+                : unselectedIndicatorColor,
+        child: (indicatorChildBuilder ?? (_, __) {})(
+            context, currentIndex == index),
+      ),
     );
   }
 }

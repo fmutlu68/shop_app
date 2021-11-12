@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DarkTheme {
   static DarkTheme? _instance;
@@ -10,7 +11,7 @@ class DarkTheme {
   DarkTheme._init();
 
   ThemeData get theme => ThemeData.dark().copyWith(
-        textTheme: textTheme,
+        textTheme: GoogleFonts.poppinsTextTheme(textTheme),
         colorScheme: colorScheme,
         inputDecorationTheme: inputDecoration,
       );
