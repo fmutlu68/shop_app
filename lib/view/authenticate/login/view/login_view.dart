@@ -4,13 +4,17 @@ import 'package:fluttter_shop_app/core/base/widget/base_view.dart';
 import 'package:fluttter_shop_app/core/extensions/border_radius_extension.dart';
 import 'package:fluttter_shop_app/core/extensions/dynamic_size_extension.dart';
 import 'package:fluttter_shop_app/core/extensions/padding_extension.dart';
+import 'package:fluttter_shop_app/core/extensions/spacer_extension.dart';
 import 'package:fluttter_shop_app/core/extensions/theme_extension.dart';
 import 'package:fluttter_shop_app/production/enum/app_colors_enum.dart';
+import 'package:fluttter_shop_app/production/enum/companies_enum.dart';
+import 'package:fluttter_shop_app/production/widget/buttons/company_button.dart';
 import 'package:fluttter_shop_app/view/authenticate/login/view_model/login_view_model.dart';
 
 part '../components/login_image_view.dart';
 part '../components/login_info_text.dart';
 part '../components/login_enter_number_button.dart';
+part '../components/login_with_login_company_buttons.dart';
 
 class LoginView extends StatefulWidget {
   LoginView({Key? key}) : super(key: key);
@@ -38,6 +42,9 @@ class _LoginViewState extends BaseViewState<LoginView> {
               buildLoginImage,
               buildInfoText,
               buildLoginButton,
+              buildORText,
+              context.veryLowHeightSpacer,
+              buildLoginButtonsRow,
             ],
           ),
         ),

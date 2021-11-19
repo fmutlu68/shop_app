@@ -8,7 +8,6 @@ import 'package:fluttter_shop_app/core/entities/components/button/style_types/te
 import 'package:fluttter_shop_app/core/extensions/dynamic_size_extension.dart';
 import 'package:fluttter_shop_app/core/extensions/spacer_extension.dart';
 import 'package:fluttter_shop_app/core/extensions/theme_extension.dart';
-import 'package:fluttter_shop_app/core/start/navigation/routes/navigation_route.dart';
 import 'package:fluttter_shop_app/production/enum/app_colors_enum.dart';
 import 'package:fluttter_shop_app/view/authenticate/onboard/view_model/onboard_view_model.dart';
 
@@ -115,8 +114,4 @@ class _OnboardViewState extends BaseViewState<OnboardView> {
           ),
         ),
       );
-
-  // get buildIndicatorList => null;
-
-  // get buildNextButton => null;
 }

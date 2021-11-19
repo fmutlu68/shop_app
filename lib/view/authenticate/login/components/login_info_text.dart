@@ -8,4 +8,10 @@ extension LoginInfoText on _LoginViewState {
           fontWeight: FontWeight.bold,
         ),
       );
+  Widget get buildORText => Text(
+        "OR",
+        style: context.textTheme.headline6?.copyWith(
+          fontWeight: FontWeight.bold,
+        ),
+      );
 }

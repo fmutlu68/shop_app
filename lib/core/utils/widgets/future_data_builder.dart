@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
-class FutureNullableDataBuilder<T> extends StatefulWidget {
-  final Future<T> data;
+class FutureDataBuilder<T> extends StatefulWidget {
+  final Future<T?> data;
   final Widget? onDataLoading;
   final Widget onDataNoExist;
   final Widget Function(T data) onDataExist;
   final bool isLog;
   final bool showCircular;
-  const FutureNullableDataBuilder({
+  const FutureDataBuilder({
     Key? key,
     required this.data,
     required this.onDataNoExist,
@@ -19,21 +19,19 @@ class FutureNullableDataBuilder<T> extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FutureNullableDataBuilderState<T> createState() =>
-      _FutureNullableDataBuilderState<T>();
+  _FutureDataBuilderState<T> createState() => _FutureDataBuilderState<T>();
 }
 
-class _FutureNullableDataBuilderState<T>
-    extends State<FutureNullableDataBuilder<T>> {
+class _FutureDataBuilderState<T> extends State<FutureDataBuilder<T>> {
   late bool wasDataLoaded;
   late bool isDataNull;
   T? data;
 
   @override
   Widget build(BuildContext context) {
-    return widget.data.toBuild<T>(
+    return widget.data.toBuild<T?>(
       onSuccess: (data) {
-        if (data == null) {
+        if (data == null || (data is List && data.isEmpty)) {
           return widget.onDataNoExist;
         } else {
           return widget.onDataExist(data);
@@ -50,23 +48,4 @@ class _FutureNullableDataBuilderState<T>
   Widget get circularIndicator => Center(
         child: CircularProgressIndicator(),
       );
-}
-
-enum _DataSituationState {
-  loading,
-  exist,
-  noexist,
-}
-
-extension on _DataSituationState {
-  String get message {
-    switch (this) {
-      case _DataSituationState.loading:
-        return "Data Yükleniyor...";
-      case _DataSituationState.exist:
-        return "Data Null Değil.";
-      case _DataSituationState.noexist:
-        return "Data Null.";
-    }
-  }
 }

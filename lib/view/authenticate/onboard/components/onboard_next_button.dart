@@ -3,11 +3,11 @@ part of '../view/onboard_view.dart';
 extension OnboardNextButton on _OnboardViewState {
   get buildNextButton => Observer(
         builder: (_) => CustomTextButton(
-          onTap: () {
+          onTap: () async {
             if (viewModel.index < 2) {
               viewModel.setIndex(viewModel.index + 1);
             } else {
-              goToLoginPage();
+              await viewModel.navigateToLogin();
             }
           },
           text: viewModel.index == 2 ? "Get Started" : "Next",
@@ -26,9 +26,4 @@ extension OnboardNextButton on _OnboardViewState {
           ),
         ),
       );
-
-  void goToLoginPage() {
-    viewModel.navigationService
-        .navigatePath(content: NavigationRoute.navigateToLogin());
-  }
 }

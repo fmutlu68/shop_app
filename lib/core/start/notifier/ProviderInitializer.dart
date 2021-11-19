@@ -1,4 +1,7 @@
 import 'package:fluttter_shop_app/core/start/theme/theme_notifier.dart';
+import 'package:fluttter_shop_app/production/providers/categories_notifier.dart';
+import 'package:fluttter_shop_app/production/providers/fruits_notifier.dart';
+import 'package:fluttter_shop_app/production/providers/nutritions_notifier.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
@@ -13,5 +16,11 @@ class ProviderInitializer {
 
   List<SingleChildWidget> providers = [
     ChangeNotifierProvider(create: (context) => ThemeNotifier()),
+  ];
+
+  List<SingleChildWidget> providersRelatedUI = [
+    ChangeNotifierProvider(create: (context) => CategoriesNotifier()),
+    ChangeNotifierProvider(create: (context) => FruitsNotifier()),
+    ChangeNotifierProvider(create: (context) => NutritionsNotifier()),
   ];
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttter_shop_app/core/base/model/base_view_model.dart';
+import 'package:fluttter_shop_app/core/start/navigation/routes/navigation_route.dart';
+import 'package:fluttter_shop_app/production/enum/preferecnces_keys_enum.dart';
 import 'package:fluttter_shop_app/view/authenticate/onboard/model/onboard_model.dart';
 import 'package:mobx/mobx.dart';
 part 'onboard_view_model.g.dart';
@@ -20,12 +22,12 @@ abstract class _OnboardViewModelBase with Store, BaseViewModel {
     OnboardModel(
       title: "E Shopping 2",
       subtitle: "Explore top organic fruits & grab them",
-      imagePath: "assets/images/png/onboard_image_1.png",
+      imagePath: "assets/images/png/Group 10.png",
     ),
     OnboardModel(
       title: "E Shopping 3",
       subtitle: "Explore top organic fruits & grab them",
-      imagePath: "assets/images/png/onboard_image_1.png",
+      imagePath: "assets/images/png/main_login_screen_img.png",
     ),
   ];
 
@@ -37,4 +39,9 @@ abstract class _OnboardViewModelBase with Store, BaseViewModel {
 
   @computed
   OnboardModel get onboardModel => onboardModels[index];
+
+  Future<void> navigateToLogin() async {
+    await cacheManager.setBool(PreferencesKeys.ONBOARD_SCREEN_SHOWED.key, true);
+    navigationService.navigatePath(content: NavigationRoute.navigateToLogin());
+  }
 }

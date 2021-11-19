@@ -39,4 +39,29 @@ extension PaddingExtension on BuildContext {
   EdgeInsets get veryHighHeightPadding => EdgeInsets.symmetric(
         horizontal: veryHighHeight,
       );
+
+  EdgeInsets get veryLowSymPadding => EdgeInsets.symmetric(
+        vertical: veryLowHeight,
+        horizontal: veryLowWidth,
+      );
+  EdgeInsets get lowSymPadding => EdgeInsets.symmetric(
+        vertical: lowHeight,
+        horizontal: lowWidth,
+      );
+  EdgeInsets get normalSymPadding => EdgeInsets.symmetric(
+        vertical: normalHeight,
+        horizontal: normalWidth,
+      );
+  EdgeInsets get mediumSymPadding => EdgeInsets.symmetric(
+        vertical: mediumHeight,
+        horizontal: mediumWidth,
+      );
+  EdgeInsets get highSymPadding => EdgeInsets.symmetric(
+        vertical: highHeight,
+        horizontal: highWidth,
+      );
+  EdgeInsets get veryHighSymPadding => EdgeInsets.symmetric(
+        vertical: veryHighHeight,
+        horizontal: veryHighWidth,
+      );
 }
