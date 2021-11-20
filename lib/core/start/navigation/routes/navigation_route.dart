@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/model/local/fruit.dart';
+import 'package:fluttter_shop_app/model/fruit.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'navigation_route.freezed.dart';
@@ -9,6 +9,8 @@ class NavigationRoute with _$NavigationRoute {
   const factory NavigationRoute.navigateToOnboard() = NavigationRouteOnboard;
   const factory NavigationRoute.navigateToLogin() = NavigationRouteLogin;
   const factory NavigationRoute.navigateToHome() = NavigationRouteHome;
+  const factory NavigationRoute.navigateToShoppingCart() =
+      NavigationRouteShoppingCart;
   const factory NavigationRoute.navigateToFruitDetail(Fruit fruit) =
       NavigationRouteFruitDetail;
 }
@@ -20,6 +22,7 @@ extension NavigationPathExtension on NavigationRoute {
       navigateToOnboard: () => "/onboard",
       navigateToFruitDetail: (_) => "/fruitdetail",
       navigateToHome: () => "/home",
+      navigateToShoppingCart: () => "/cart",
     );
   }
 }

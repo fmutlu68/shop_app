@@ -1,10 +1,10 @@
-import 'package:fluttter_shop_app/model/network/category.dart';
+import 'package:fluttter_shop_app/model/category.dart';
 import 'package:fluttter_shop_app/core/entities/result/data_result.dart';
 import 'package:fluttter_shop_app/core/entities/result/list_data_result.dart';
 import 'package:fluttter_shop_app/production/enum/api_paths_enum.dart';
 import 'package:vexana/vexana.dart';
 
-import 'package:fluttter_shop_app/model/local/fruit.dart';
+import 'package:fluttter_shop_app/model/fruit.dart';
 
 abstract class IFruitsService {
   INetworkManager networkManager;

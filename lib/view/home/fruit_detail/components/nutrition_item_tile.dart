@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttter_shop_app/core/extensions/dynamic_size_extension.dart';
 import 'package:fluttter_shop_app/core/extensions/theme_extension.dart';
-import 'package:fluttter_shop_app/model/network/nutrition.dart';
+import 'package:fluttter_shop_app/model/nutrition.dart';
 
 class NutritionItemTile extends StatelessWidget {
   final Nutrition nutrition;

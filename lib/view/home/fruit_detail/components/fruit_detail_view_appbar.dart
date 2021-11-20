@@ -5,7 +5,7 @@ extension _FruitDetailViewAppBar on _FruitDetailViewState {
         backgroundColor: colorService.getColor(AppColors.PRIMARY.value),
         leading: buildBackButton,
         title: Text("DETAILS"),
-        leadingWidth: 30,
+        leadingWidth: 40,
         toolbarHeight: calculateDynamicHeight(9),
       );
   Padding get buildBackButton {

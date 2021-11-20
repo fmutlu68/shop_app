@@ -28,6 +28,10 @@ class _$NavigationRouteTearOff {
     return const NavigationRouteHome();
   }
 
+  NavigationRouteShoppingCart navigateToShoppingCart() {
+    return const NavigationRouteShoppingCart();
+  }
+
   NavigationRouteFruitDetail navigateToFruitDetail(Fruit fruit) {
     return NavigationRouteFruitDetail(
       fruit,
@@ -45,6 +49,7 @@ mixin _$NavigationRoute {
     required TResult Function() navigateToOnboard,
     required TResult Function() navigateToLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToShoppingCart,
     required TResult Function(Fruit fruit) navigateToFruitDetail,
   }) =>
       throw _privateConstructorUsedError;
@@ -53,6 +58,7 @@ mixin _$NavigationRoute {
     TResult Function()? navigateToOnboard,
     TResult Function()? navigateToLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToShoppingCart,
     TResult Function(Fruit fruit)? navigateToFruitDetail,
     required TResult orElse(),
   }) =>
@@ -62,6 +68,8 @@ mixin _$NavigationRoute {
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
     required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteShoppingCart value)
+        navigateToShoppingCart,
     required TResult Function(NavigationRouteFruitDetail value)
         navigateToFruitDetail,
   }) =>
@@ -71,6 +79,7 @@ mixin _$NavigationRoute {
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
     TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
     TResult Function(NavigationRouteFruitDetail value)? navigateToFruitDetail,
     required TResult orElse(),
   }) =>
@@ -137,6 +146,7 @@ class _$NavigationRouteOnboard implements NavigationRouteOnboard {
     required TResult Function() navigateToOnboard,
     required TResult Function() navigateToLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToShoppingCart,
     required TResult Function(Fruit fruit) navigateToFruitDetail,
   }) {
     return navigateToOnboard();
@@ -148,6 +158,7 @@ class _$NavigationRouteOnboard implements NavigationRouteOnboard {
     TResult Function()? navigateToOnboard,
     TResult Function()? navigateToLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToShoppingCart,
     TResult Function(Fruit fruit)? navigateToFruitDetail,
     required TResult orElse(),
   }) {
@@ -163,6 +174,8 @@ class _$NavigationRouteOnboard implements NavigationRouteOnboard {
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
     required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteShoppingCart value)
+        navigateToShoppingCart,
     required TResult Function(NavigationRouteFruitDetail value)
         navigateToFruitDetail,
   }) {
@@ -175,6 +188,7 @@ class _$NavigationRouteOnboard implements NavigationRouteOnboard {
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
     TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
     TResult Function(NavigationRouteFruitDetail value)? navigateToFruitDetail,
     required TResult orElse(),
   }) {
@@ -232,6 +246,7 @@ class _$NavigationRouteLogin implements NavigationRouteLogin {
     required TResult Function() navigateToOnboard,
     required TResult Function() navigateToLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToShoppingCart,
     required TResult Function(Fruit fruit) navigateToFruitDetail,
   }) {
     return navigateToLogin();
@@ -243,6 +258,7 @@ class _$NavigationRouteLogin implements NavigationRouteLogin {
     TResult Function()? navigateToOnboard,
     TResult Function()? navigateToLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToShoppingCart,
     TResult Function(Fruit fruit)? navigateToFruitDetail,
     required TResult orElse(),
   }) {
@@ -258,6 +274,8 @@ class _$NavigationRouteLogin implements NavigationRouteLogin {
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
     required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteShoppingCart value)
+        navigateToShoppingCart,
     required TResult Function(NavigationRouteFruitDetail value)
         navigateToFruitDetail,
   }) {
@@ -270,6 +288,7 @@ class _$NavigationRouteLogin implements NavigationRouteLogin {
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
     TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
     TResult Function(NavigationRouteFruitDetail value)? navigateToFruitDetail,
     required TResult orElse(),
   }) {
@@ -327,6 +346,7 @@ class _$NavigationRouteHome implements NavigationRouteHome {
     required TResult Function() navigateToOnboard,
     required TResult Function() navigateToLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToShoppingCart,
     required TResult Function(Fruit fruit) navigateToFruitDetail,
   }) {
     return navigateToHome();
@@ -338,6 +358,7 @@ class _$NavigationRouteHome implements NavigationRouteHome {
     TResult Function()? navigateToOnboard,
     TResult Function()? navigateToLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToShoppingCart,
     TResult Function(Fruit fruit)? navigateToFruitDetail,
     required TResult orElse(),
   }) {
@@ -353,6 +374,8 @@ class _$NavigationRouteHome implements NavigationRouteHome {
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
     required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteShoppingCart value)
+        navigateToShoppingCart,
     required TResult Function(NavigationRouteFruitDetail value)
         navigateToFruitDetail,
   }) {
@@ -365,6 +388,7 @@ class _$NavigationRouteHome implements NavigationRouteHome {
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
     TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
     TResult Function(NavigationRouteFruitDetail value)? navigateToFruitDetail,
     required TResult orElse(),
   }) {
@@ -377,6 +401,108 @@ class _$NavigationRouteHome implements NavigationRouteHome {
 
 abstract class NavigationRouteHome implements NavigationRoute {
   const factory NavigationRouteHome() = _$NavigationRouteHome;
+}
+
+/// @nodoc
+abstract class $NavigationRouteShoppingCartCopyWith<$Res> {
+  factory $NavigationRouteShoppingCartCopyWith(
+          NavigationRouteShoppingCart value,
+          $Res Function(NavigationRouteShoppingCart) then) =
+      _$NavigationRouteShoppingCartCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$NavigationRouteShoppingCartCopyWithImpl<$Res>
+    extends _$NavigationRouteCopyWithImpl<$Res>
+    implements $NavigationRouteShoppingCartCopyWith<$Res> {
+  _$NavigationRouteShoppingCartCopyWithImpl(NavigationRouteShoppingCart _value,
+      $Res Function(NavigationRouteShoppingCart) _then)
+      : super(_value, (v) => _then(v as NavigationRouteShoppingCart));
+
+  @override
+  NavigationRouteShoppingCart get _value =>
+      super._value as NavigationRouteShoppingCart;
+}
+
+/// @nodoc
+
+class _$NavigationRouteShoppingCart implements NavigationRouteShoppingCart {
+  const _$NavigationRouteShoppingCart();
+
+  @override
+  String toString() {
+    return 'NavigationRoute.navigateToShoppingCart()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is NavigationRouteShoppingCart);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() navigateToOnboard,
+    required TResult Function() navigateToLogin,
+    required TResult Function() navigateToHome,
+    required TResult Function() navigateToShoppingCart,
+    required TResult Function(Fruit fruit) navigateToFruitDetail,
+  }) {
+    return navigateToShoppingCart();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? navigateToOnboard,
+    TResult Function()? navigateToLogin,
+    TResult Function()? navigateToHome,
+    TResult Function()? navigateToShoppingCart,
+    TResult Function(Fruit fruit)? navigateToFruitDetail,
+    required TResult orElse(),
+  }) {
+    if (navigateToShoppingCart != null) {
+      return navigateToShoppingCart();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
+    required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteShoppingCart value)
+        navigateToShoppingCart,
+    required TResult Function(NavigationRouteFruitDetail value)
+        navigateToFruitDetail,
+  }) {
+    return navigateToShoppingCart(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
+    TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
+    TResult Function(NavigationRouteFruitDetail value)? navigateToFruitDetail,
+    required TResult orElse(),
+  }) {
+    if (navigateToShoppingCart != null) {
+      return navigateToShoppingCart(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NavigationRouteShoppingCart implements NavigationRoute {
+  const factory NavigationRouteShoppingCart() = _$NavigationRouteShoppingCart;
 }
 
 /// @nodoc
@@ -450,6 +576,7 @@ class _$NavigationRouteFruitDetail implements NavigationRouteFruitDetail {
     required TResult Function() navigateToOnboard,
     required TResult Function() navigateToLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToShoppingCart,
     required TResult Function(Fruit fruit) navigateToFruitDetail,
   }) {
     return navigateToFruitDetail(fruit);
@@ -461,6 +588,7 @@ class _$NavigationRouteFruitDetail implements NavigationRouteFruitDetail {
     TResult Function()? navigateToOnboard,
     TResult Function()? navigateToLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToShoppingCart,
     TResult Function(Fruit fruit)? navigateToFruitDetail,
     required TResult orElse(),
   }) {
@@ -476,6 +604,8 @@ class _$NavigationRouteFruitDetail implements NavigationRouteFruitDetail {
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
     required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteShoppingCart value)
+        navigateToShoppingCart,
     required TResult Function(NavigationRouteFruitDetail value)
         navigateToFruitDetail,
   }) {
@@ -488,6 +618,7 @@ class _$NavigationRouteFruitDetail implements NavigationRouteFruitDetail {
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
     TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
     TResult Function(NavigationRouteFruitDetail value)? navigateToFruitDetail,
     required TResult orElse(),
   }) {

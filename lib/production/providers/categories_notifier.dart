@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/model/network/category.dart';
+import 'package:fluttter_shop_app/model/category.dart';
 
 class CategoriesNotifier extends ChangeNotifier {
   List<Category> categories = [];

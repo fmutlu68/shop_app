@@ -5,7 +5,7 @@ import 'package:fluttter_shop_app/core/extensions/navigation_extension.dart';
 import 'package:fluttter_shop_app/core/extensions/padding_extension.dart';
 import 'package:fluttter_shop_app/core/extensions/theme_extension.dart';
 import 'package:fluttter_shop_app/core/start/navigation/routes/navigation_route.dart';
-import 'package:fluttter_shop_app/model/local/fruit.dart';
+import 'package:fluttter_shop_app/model/fruit.dart';
 
 class FruitCard extends StatelessWidget {
   final Fruit fruit;

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttter_shop_app/core/extensions/dynamic_size_extension.dart';
 import 'package:fluttter_shop_app/core/extensions/padding_extension.dart';
 import 'package:fluttter_shop_app/core/extensions/theme_extension.dart';
-import 'package:fluttter_shop_app/model/local/fruit.dart';
+import 'package:fluttter_shop_app/model/fruit.dart';
 import 'package:fluttter_shop_app/view/home/fruits/components/fruit_card.dart';
 
 class FruitsListRow extends StatelessWidget {

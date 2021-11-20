@@ -14,6 +14,8 @@ class LightTheme {
         textTheme: GoogleFonts.poppinsTextTheme(textTheme),
         colorScheme: colorScheme,
         inputDecorationTheme: inputDecoration,
+        accentColor: Colors.red,
+        primaryColor: Colors.blue,
       );
 
   TextTheme get textTheme {

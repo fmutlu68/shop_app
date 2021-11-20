@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/model/local/fruit.dart';
+import 'package:fluttter_shop_app/model/fruit.dart';
 import 'package:fluttter_shop_app/core/entities/result/data_result.dart';
 
 class FruitsNotifier extends ChangeNotifier {

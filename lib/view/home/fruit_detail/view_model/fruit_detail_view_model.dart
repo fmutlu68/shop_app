@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttter_shop_app/core/base/model/base_view_model.dart';
-import 'package:fluttter_shop_app/model/network/nutrition.dart';
+import 'package:fluttter_shop_app/model/nutrition.dart';
 import 'package:fluttter_shop_app/production/providers/nutritions_notifier.dart';
 import 'package:fluttter_shop_app/view/home/fruit_detail/service/fruit_detail_service.dart';
 import 'package:mobx/mobx.dart';
