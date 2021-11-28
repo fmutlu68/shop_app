@@ -12,6 +12,7 @@ class TextButtonStyle extends NormalButtonStyle {
     BoxBorder? border,
     double? height,
     double? width,
+    double? elevation,
     EdgeInsets? margin,
     EdgeInsets? padding,
     BorderRadiusGeometry? radius,
@@ -23,5 +24,6 @@ class TextButtonStyle extends NormalButtonStyle {
           margin: margin,
           padding: padding,
           radius: radius,
+          elevation: elevation,
         );
 }

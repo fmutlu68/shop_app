@@ -15,6 +15,7 @@ import 'package:fluttter_shop_app/model/category.dart';
 import 'package:fluttter_shop_app/core/entities/result/data_result.dart';
 import 'package:fluttter_shop_app/production/enum/app_colors_enum.dart';
 import 'package:fluttter_shop_app/production/enum/fruit_types_enum.dart';
+import 'package:fluttter_shop_app/production/enum/fruits_menu_pages_item.dart';
 import 'package:fluttter_shop_app/production/utility/SilverListDelegateWithOnlyItemCountPerRow.dart';
 import 'package:fluttter_shop_app/view/home/fruits/components/fruit_card.dart';
 import 'package:fluttter_shop_app/view/home/fruits/components/fruits_list_row.dart';

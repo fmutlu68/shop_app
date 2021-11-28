@@ -15,6 +15,7 @@ abstract class BaseViewModel {
   INavigationService navigationService = NavigationService.shared;
   ILocalCacheManager cacheManager = LocalCacheManager.instance;
   INetworkManager networkManager = NetworkManager(
-      options: BaseOptions(baseUrl: 'http://192.168.1.7:5199/api/'),
-      isEnableLogger: true);
+    options: BaseOptions(baseUrl: 'http://192.168.1.7:5199/api/'),
+    isEnableLogger: true,
+  );
 }

@@ -7,18 +7,21 @@ extension _FruitsViewFabButton on _FruitsViewState {
         items: [
           FabButtonItem(
             Icon(Icons.shopping_cart_outlined),
-            () {},
+            () => viewModel.onMenuItemClicked(FruitsMenuPage.ShoppingCart),
             tooltip: "Shopping Cart",
+            backgroundColor: colorService.getColor(AppColors.SECONDARY.value),
           ),
           FabButtonItem(
             Icon(Icons.favorite_outline),
-            () {},
+            () => viewModel.onMenuItemClicked(FruitsMenuPage.Favorites),
             tooltip: "Favourite",
+            backgroundColor: colorService.getColor(AppColors.SECONDARY.value),
           ),
           FabButtonItem(
             Icon(Icons.person_outline),
-            () {},
+            () => viewModel.onMenuItemClicked(FruitsMenuPage.Account),
             tooltip: "Account",
+            backgroundColor: colorService.getColor(AppColors.SECONDARY.value),
           ),
         ],
         listDirection: Axis.horizontal,

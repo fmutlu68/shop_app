@@ -1,6 +1,7 @@
 import 'package:fluttter_shop_app/model/category.dart';
 import 'package:fluttter_shop_app/core/entities/result/data_result.dart';
 import 'package:fluttter_shop_app/core/entities/result/list_data_result.dart';
+import 'package:fluttter_shop_app/production/enum/api_controllers_enum.dart';
 import 'package:fluttter_shop_app/production/enum/api_paths_enum.dart';
 import 'package:vexana/vexana.dart';
 
@@ -22,7 +23,7 @@ class FruitsSerivce extends IFruitsService {
   Future<List<Fruit>?> getFruits() async {
     IResponseModel<List<Fruit>?> response =
         await networkManager.send<Fruit, List<Fruit>>(
-      "${ApiPaths.Fruit.path}/getfruits",
+      "${ApiPaths.Fruit.path}/${FruitRoutePaths.List.path}",
       parseModel: Fruit(),
       method: RequestType.GET,
     );
@@ -44,7 +45,7 @@ class FruitsSerivce extends IFruitsService {
   Future<DataResult<List<Fruit>>?> getFruitsByType(int typeId) async {
     IResponseModel<DataResult<List<Fruit>>?> response = await networkManager
         .send<ListDataResult<Fruit>, DataResult<List<Fruit>>>(
-      "${ApiPaths.Fruit.path}/getfruitsbytype?typeId=$typeId",
+      "${ApiPaths.Fruit.path}/${FruitRoutePaths.GetFruitsByTypeId.path}?typeId=$typeId",
       parseModel: ListDataResult(parserModel: Fruit()),
       method: RequestType.GET,
     );

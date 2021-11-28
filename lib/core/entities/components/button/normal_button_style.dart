@@ -5,6 +5,7 @@ import 'package:fluttter_shop_app/core/entities/components/button/button_style.d
 class NormalButtonStyle extends BaseButtonStyle {
   final double? width;
   final double? height;
+  final double? elevation;
   final Color? backgroundColor;
   final BorderRadiusGeometry? radius;
   final BoxBorder? border;
@@ -14,6 +15,7 @@ class NormalButtonStyle extends BaseButtonStyle {
   NormalButtonStyle({
     this.width,
     this.height,
+    this.elevation,
     this.backgroundColor,
     this.radius,
     this.border,

@@ -7,7 +7,9 @@ import 'package:fluttter_shop_app/model/fruit.dart';
 import 'package:fluttter_shop_app/production/enum/preferecnces_keys_enum.dart';
 import 'package:fluttter_shop_app/view/authenticate/login/view/login_view.dart';
 import 'package:fluttter_shop_app/view/authenticate/onboard/view/onboard_view.dart';
+import 'package:fluttter_shop_app/view/home/account/view/account_view.dart';
 import 'package:fluttter_shop_app/view/home/cart/view/cart_view.dart';
+import 'package:fluttter_shop_app/view/home/favorites/view/favorites_view.dart';
 import 'package:fluttter_shop_app/view/home/fruit_detail/view/fruit_detail_view.dart';
 import 'package:fluttter_shop_app/view/home/fruits/view/fruits_view.dart';
 
@@ -47,6 +49,12 @@ class NavigationRouter extends INavigationRouter {
       },
       navigateToShoppingCart: () {
         return generatePageRoute(CartView());
+      },
+      navigateToFavorites: () {
+        return generatePageRoute(FavoritesView());
+      },
+      navigateToAccount: () {
+        return generatePageRoute(AccountView());
       },
     );
   }

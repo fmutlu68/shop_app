@@ -34,6 +34,7 @@ class NormalButton extends StatelessWidget {
                   ),
           ),
           primary: style?.backgroundColor,
+          elevation: style!.elevation,
         ),
       ),
     );

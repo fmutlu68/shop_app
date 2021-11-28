@@ -106,6 +106,8 @@ class _AnimatedFabButtonState extends State<AnimatedFabButton>
         child: item.icon,
         backgroundColor: item.backgroundColor,
         tooltip: item.tooltip,
+        elevation: 0,
+        heroTag: item.tooltip,
       ),
     );
   }
@@ -168,7 +170,6 @@ class _AnimatedFabButtonState extends State<AnimatedFabButton>
   List<Widget> get buildFabMenuHorizontalItems {
     List<Widget> items = [];
     for (var i = 0; i < widget.items.length; i++) {
-      print("$i ${widget.items[i].tooltip}");
       items.add(
         buildHorizontalButton(
           (widget.items.length - i).toDouble(),

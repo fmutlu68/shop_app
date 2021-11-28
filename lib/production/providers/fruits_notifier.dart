@@ -14,6 +14,7 @@ class FruitsNotifier extends ChangeNotifier {
 
   void addFruitsByTypeId(int typeId, DataResult<List<Fruit>> fruitsByType) {
     fruitsByTypeId[typeId] = fruitsByType;
+    fruits.addAll(fruitsByType.data ?? []);
     notifyListeners();
   }
 

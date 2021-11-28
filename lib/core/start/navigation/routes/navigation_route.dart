@@ -9,6 +9,9 @@ class NavigationRoute with _$NavigationRoute {
   const factory NavigationRoute.navigateToOnboard() = NavigationRouteOnboard;
   const factory NavigationRoute.navigateToLogin() = NavigationRouteLogin;
   const factory NavigationRoute.navigateToHome() = NavigationRouteHome;
+  const factory NavigationRoute.navigateToAccount() = NavigationRouteAccount;
+  const factory NavigationRoute.navigateToFavorites() =
+      NavigationRouteFavorites;
   const factory NavigationRoute.navigateToShoppingCart() =
       NavigationRouteShoppingCart;
   const factory NavigationRoute.navigateToFruitDetail(Fruit fruit) =
@@ -23,6 +26,8 @@ extension NavigationPathExtension on NavigationRoute {
       navigateToFruitDetail: (_) => "/fruitdetail",
       navigateToHome: () => "/home",
       navigateToShoppingCart: () => "/cart",
+      navigateToFavorites: () => "/favorites",
+      navigateToAccount: () => "/account",
     );
   }
 }
