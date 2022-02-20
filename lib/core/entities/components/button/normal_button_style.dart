@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:fluttter_shop_app/core/entities/components/button/button_style.dart';
+import 'button_style.dart';
 
 class NormalButtonStyle extends BaseButtonStyle {
   final double? width;

@@ -1,6 +1,6 @@
-part of 'package:fluttter_shop_app/view/authenticate/login/view/login_view.dart';
+part of 'package:fluttter_shop_app/view/authenticate/main_login/view/login_view.dart';
 
-extension LoginInfoText on _LoginViewState {
+extension LoginInfoText on _MainLoginViewState {
   Widget get buildInfoText => Text(
         "Fruit Market",
         style: context.textTheme.headline3!.copyWith(

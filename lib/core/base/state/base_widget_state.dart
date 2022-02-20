@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import '../../utils/laten.dart';
 
-abstract class BaseWidgetState {
-  late BuildContext context;
-  void setContext(BuildContext newContext) => context = newContext;
+abstract class BaseWidgetState extends StatelessWidget {
+  final Laten<BuildContext> _context = Laten();
+  BuildContext get context => _context.data!;
+  void setContext(BuildContext newContext) {
+    if (_context.isDataEmpty) {
+      _context.setValue(newContext);
+    }
+  }
 
   Size get screenSize => MediaQuery.of(context).size;
 

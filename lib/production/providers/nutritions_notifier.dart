@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/model/nutrition.dart';
+import '../../model/nutrition.dart';
 
 class NutritionsNotifier extends ChangeNotifier {
   Map<int, List<Nutrition>> nutritionsByFruit = {};

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/model/basket.dart';
+import '../../model/basket.dart';
 
 class BasketNotifier extends ChangeNotifier {
   List<Basket> baskets = [

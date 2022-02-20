@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/base/model/base_view_model.dart';
-import 'package:fluttter_shop_app/model/fruit.dart';
-import 'package:fluttter_shop_app/production/providers/fruits_notifier.dart';
+import '../../../../core/base/model/base_view_model.dart';
+import '../../../../model/fruit.dart';
+import '../../../../production/providers/fruits_notifier.dart';
 import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
 part 'favorites_view_model.g.dart';

@@ -1,6 +1,6 @@
-import 'package:fluttter_shop_app/core/base/services/base_color_service.dart';
-import 'package:fluttter_shop_app/core/extensions/color_extension.dart';
-import 'package:fluttter_shop_app/production/enum/app_colors_enum.dart';
+import '../../core/base/services/base_color_service.dart';
+import '../../core/extensions/color_extension.dart';
+import '../enum/app_colors_enum.dart';
 
 class ColorService extends BaseColorService {
   @override

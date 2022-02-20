@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/extensions/theme_mode_extension.dart';
-import 'package:fluttter_shop_app/core/start/cache/local_cache_manager.dart';
+import '../../extensions/theme_mode_extension.dart';
+import '../cache/local_cache_manager.dart';
 
 class ThemeNotifier extends ChangeNotifier {
   ThemeMode _mode = _getInitialThemeMode();

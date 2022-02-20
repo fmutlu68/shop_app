@@ -1,7 +1,7 @@
-import 'package:fluttter_shop_app/core/entities/result/data_result.dart';
-import 'package:fluttter_shop_app/core/entities/result/list_data_result.dart';
-import 'package:fluttter_shop_app/model/nutrition.dart';
-import 'package:fluttter_shop_app/production/enum/api_paths_enum.dart';
+import '../../../../core/entities/result/data_result.dart';
+import '../../../../core/entities/result/list_data_result.dart';
+import '../../../../model/nutrition.dart';
+import '../../../../production/enum/api_paths_enum.dart';
 import 'package:vexana/vexana.dart';
 
 abstract class IFruitDetailService {

@@ -1,5 +1,6 @@
-import 'package:fluttter_shop_app/core/permission/IPermissionService.dart';
 import 'package:permission_handler/permission_handler.dart';
+
+import 'IPermissionService.dart';
 
 class PermissionManager implements IPermissionService {
   static PermissionManager? _instance;

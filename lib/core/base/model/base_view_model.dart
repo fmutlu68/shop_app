@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/start/cache/ILocalCacheManager.dart';
-import 'package:fluttter_shop_app/core/start/cache/local_cache_manager.dart';
+import '../../start/cache/ILocalCacheManager.dart';
+import '../../start/cache/local_cache_manager.dart';
 import 'package:vexana/vexana.dart';
 
 import '../../start/navigation/service/INavigationService.dart';

@@ -1,5 +1,5 @@
-import 'package:fluttter_shop_app/model/basket.dart';
-import 'package:fluttter_shop_app/model/fruit.dart';
+import '../../../../model/basket.dart';
+import '../../../../model/fruit.dart';
 
 class CartItemModel {
   final Fruit fruit;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/components/button/normal_button.dart';
-import 'package:fluttter_shop_app/core/entities/components/button/style_types/text_button_style.dart';
+
+import '../../../entities/components/button/style_types/text_button_style.dart';
+import '../normal_button.dart';
 
 class CustomTextButton extends StatelessWidget {
   final TextButtonStyle? style;
@@ -17,6 +18,7 @@ class CustomTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NormalButton(
+      key: key,
       onTap: onTap,
       style: style,
       child: Text(

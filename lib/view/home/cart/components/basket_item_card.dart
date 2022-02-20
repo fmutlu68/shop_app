@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/extensions/border_radius_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/dynamic_size_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/padding_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/spacer_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/theme_extension.dart';
-import 'package:fluttter_shop_app/model/basket.dart';
-import 'package:fluttter_shop_app/model/fruit.dart';
+import '../../../../core/extensions/border_radius_extension.dart';
+import '../../../../core/extensions/dynamic_size_extension.dart';
+import '../../../../core/extensions/spacer_extension.dart';
+import '../../../../core/extensions/theme_extension.dart';
+import '../../../../model/basket.dart';
+import '../../../../model/fruit.dart';
 
 class BasketItemCard extends StatefulWidget {
   final Fruit fruit;

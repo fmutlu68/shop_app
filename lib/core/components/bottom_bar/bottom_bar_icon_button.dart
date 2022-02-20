@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/extensions/border_radius_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/dynamic_size_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/padding_extension.dart';
+import '../../extensions/border_radius_extension.dart';
+import '../../extensions/dynamic_size_extension.dart';
+import '../../extensions/padding_extension.dart';
 
 class BottomBarIconButton extends StatelessWidget {
   final double? width;

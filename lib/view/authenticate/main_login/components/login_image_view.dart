@@ -1,6 +1,6 @@
-part of 'package:fluttter_shop_app/view/authenticate/login/view/login_view.dart';
+part of 'package:fluttter_shop_app/view/authenticate/main_login/view/login_view.dart';
 
-extension LoginImageView on _LoginViewState {
+extension LoginImageView on _MainLoginViewState {
   Widget get buildLoginImage => Container(
         height: calculateDynamicHeight(35),
         width: double.infinity,

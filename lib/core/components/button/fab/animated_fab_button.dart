@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/entities/components/button/fab_button_item.dart';
+import '../../../entities/components/button/fab_button_item.dart';
 
 class AnimatedFabButton extends StatefulWidget {
   final double fabMenuHeight;

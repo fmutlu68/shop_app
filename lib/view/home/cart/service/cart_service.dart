@@ -1,8 +1,8 @@
-import 'package:fluttter_shop_app/core/entities/result/data_result.dart';
-import 'package:fluttter_shop_app/core/entities/result/entity_data_result.dart';
-import 'package:fluttter_shop_app/model/fruit.dart';
-import 'package:fluttter_shop_app/production/enum/api_controllers_enum.dart';
-import 'package:fluttter_shop_app/production/enum/api_paths_enum.dart';
+import '../../../../core/entities/result/data_result.dart';
+import '../../../../core/entities/result/entity_data_result.dart';
+import '../../../../model/fruit.dart';
+import '../../../../production/enum/api_controllers_enum.dart';
+import '../../../../production/enum/api_paths_enum.dart';
 import 'package:vexana/vexana.dart';
 
 abstract class ICartService {

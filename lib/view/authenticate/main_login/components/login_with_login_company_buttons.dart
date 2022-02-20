@@ -1,6 +1,6 @@
-part of 'package:fluttter_shop_app/view/authenticate/login/view/login_view.dart';
+part of 'package:fluttter_shop_app/view/authenticate/main_login/view/login_view.dart';
 
-extension LoginWithLoginCompanyButtons on _LoginViewState {
+extension LoginWithLoginCompanyButtons on _MainLoginViewState {
   Widget get buildLoginWithGoogleButton => CompanyButton(
         company: Companies.GOOGLE,
         onTap: () {},

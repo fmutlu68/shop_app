@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/base/services/base_color_service.dart';
-import 'package:fluttter_shop_app/core/components/button/impl/text_button.dart';
-import 'package:fluttter_shop_app/core/entities/components/button/style_types/text_button_style.dart';
-import 'package:fluttter_shop_app/core/extensions/border_radius_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/dynamic_size_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/padding_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/theme_extension.dart';
-import 'package:fluttter_shop_app/model/basket.dart';
-import 'package:fluttter_shop_app/model/fruit.dart';
-import 'package:fluttter_shop_app/production/enum/app_colors_enum.dart';
+import '../../../../core/base/services/base_color_service.dart';
+import '../../../../core/components/button/impl/text_button.dart';
+import '../../../../core/entities/components/button/style_types/text_button_style.dart';
+import '../../../../core/extensions/border_radius_extension.dart';
+import '../../../../core/extensions/dynamic_size_extension.dart';
+import '../../../../core/extensions/padding_extension.dart';
+import '../../../../core/extensions/theme_extension.dart';
+import '../../../../model/basket.dart';
+import '../../../../model/fruit.dart';
+import '../../../../production/enum/app_colors_enum.dart';
 
 class FavoriteFruitItemCard extends StatefulWidget {
   final Fruit fruit;

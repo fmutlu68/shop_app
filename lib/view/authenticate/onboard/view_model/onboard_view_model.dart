@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/base/model/base_view_model.dart';
-import 'package:fluttter_shop_app/core/start/navigation/routes/navigation_route.dart';
-import 'package:fluttter_shop_app/production/enum/preferecnces_keys_enum.dart';
-import 'package:fluttter_shop_app/view/authenticate/onboard/model/onboard_model.dart';
+import '../../../../core/base/model/base_view_model.dart';
+import '../../../../core/start/navigation/routes/navigation_route.dart';
+import '../../../../production/enum/preferecnces_keys_enum.dart';
+import '../model/onboard_model.dart';
 import 'package:mobx/mobx.dart';
 part 'onboard_view_model.g.dart';
 
@@ -42,6 +42,7 @@ abstract class _OnboardViewModelBase with Store, BaseViewModel {
 
   Future<void> navigateToLogin() async {
     await cacheManager.setBool(PreferencesKeys.ONBOARD_SCREEN_SHOWED.key, true);
-    navigationService.navigatePath(content: NavigationRoute.navigateToLogin());
+    navigationService.navigatePath(
+        content: NavigationRoute.navigateToMainLogin());
   }
 }

@@ -1,4 +1,4 @@
-enum ApiPaths { Fruit, Category, FruitType, Nutrition }
+enum ApiPaths { Fruit, Category, FruitType, Nutrition, Auth }
 
 extension ApiPathsExtension on ApiPaths {
   String get path {
@@ -11,6 +11,8 @@ extension ApiPathsExtension on ApiPaths {
         return "fruittypes";
       case ApiPaths.Nutrition:
         return "nutritions";
+      case ApiPaths.Auth:
+        return "auth";
     }
   }
 }

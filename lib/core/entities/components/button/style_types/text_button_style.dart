@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:fluttter_shop_app/core/entities/components/button/normal_button_style.dart';
+import '../normal_button_style.dart';
 
 class TextButtonStyle extends NormalButtonStyle {
   final TextAlign? labelAlign;

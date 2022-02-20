@@ -1,20 +1,21 @@
-import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/base/state/base_view_state.dart';
-import 'package:fluttter_shop_app/core/base/widget/base_view.dart';
-import 'package:fluttter_shop_app/core/extensions/border_radius_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/dynamic_size_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/padding_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/spacer_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/theme_extension.dart';
-import 'package:fluttter_shop_app/production/enum/app_colors_enum.dart';
-import 'package:fluttter_shop_app/production/enum/companies_enum.dart';
-import 'package:fluttter_shop_app/production/widget/buttons/company_button.dart';
-import 'package:fluttter_shop_app/view/authenticate/login/view_model/login_view_model.dart';
+import 'dart:ui';
 
-part '../components/login_image_view.dart';
-part '../components/login_info_text.dart';
-part '../components/login_enter_number_button.dart';
-part '../components/login_with_login_company_buttons.dart';
+import 'package:animations/animations.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import '../../../../core/base/state/base_view_state.dart';
+import '../../../../core/base/widget/base_view.dart';
+import '../../../../core/components/fields/custom_text_field.dart';
+import '../../../../core/components/form/custom_form.dart';
+import '../../../../core/entities/components/fields/text_field_properties.dart';
+import '../../../../core/extensions/padding_extension.dart';
+import '../../../../core/extensions/theme_extension.dart';
+import '../../../../production/enum/app_colors_enum.dart';
+import '../view_model/login_view_model.dart';
+
+part '../components/login_view_appbar.dart';
+part '../components/login_view_login_tab_view.dart';
+part '../components/login_view_register_tab_view..dart';
 
 class LoginView extends StatefulWidget {
   LoginView({Key? key}) : super(key: key);
@@ -23,7 +24,8 @@ class LoginView extends StatefulWidget {
   _LoginViewState createState() => _LoginViewState();
 }
 
-class _LoginViewState extends BaseViewState<LoginView> {
+class _LoginViewState extends BaseViewState<LoginView>
+    with SingleTickerProviderStateMixin {
   late LoginViewModel viewModel;
   @override
   Widget build(BuildContext context) {
@@ -33,21 +35,32 @@ class _LoginViewState extends BaseViewState<LoginView> {
         viewModel = model;
         viewModel.setContext(context);
         viewModel.init();
+        viewModel.initController(this);
       },
-      onPageBuilder: (context, model) => Scaffold(
-        body: Padding(
-          padding: context.lowHeightPadding,
-          child: Column(
-            children: [
-              buildLoginImage,
-              buildInfoText,
-              buildLoginButton,
-              buildORText,
-              context.veryLowHeightSpacer,
-              buildLoginButtonsRow,
-            ],
+      onPageBuilder: (context, model) => DefaultTabController(
+        child: Scaffold(
+          appBar: buildAppBar,
+          backgroundColor: colorService.getColor(AppColors.PRIMARY.value),
+          body: Observer(
+            builder: (_) => PageTransitionSwitcher(
+              transitionBuilder: (child, firstAnimation, secondaryAnimation) {
+                return FadeThroughTransition(
+                  animation: firstAnimation,
+                  secondaryAnimation: secondaryAnimation,
+                  child: child,
+                  fillColor: colorService.getColor(AppColors.PRIMARY.value),
+                  // transitionType: SharedAxisTransitionType.horizontal,
+                );
+              },
+              child: viewModel.index == 0
+                  ? buildLoginViewTab
+                  : buildRegisterViewTab,
+              duration: Duration(seconds: 15),
+            ),
           ),
         ),
+        length: 2,
+        initialIndex: 0,
       ),
       onDispose: () {},
     );

@@ -20,12 +20,16 @@ class _$NavigationRouteTearOff {
     return const NavigationRouteOnboard();
   }
 
-  NavigationRouteLogin navigateToLogin() {
-    return const NavigationRouteLogin();
+  NavigationRouteMainLogin navigateToMainLogin() {
+    return const NavigationRouteMainLogin();
   }
 
   NavigationRouteHome navigateToHome() {
     return const NavigationRouteHome();
+  }
+
+  NavigationRouteLogin navigateToLogin() {
+    return const NavigationRouteLogin();
   }
 
   NavigationRouteAccount navigateToAccount() {
@@ -55,8 +59,9 @@ mixin _$NavigationRoute {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() navigateToOnboard,
-    required TResult Function() navigateToLogin,
+    required TResult Function() navigateToMainLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToLogin,
     required TResult Function() navigateToAccount,
     required TResult Function() navigateToFavorites,
     required TResult Function() navigateToShoppingCart,
@@ -66,8 +71,9 @@ mixin _$NavigationRoute {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? navigateToOnboard,
-    TResult Function()? navigateToLogin,
+    TResult Function()? navigateToMainLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToLogin,
     TResult Function()? navigateToAccount,
     TResult Function()? navigateToFavorites,
     TResult Function()? navigateToShoppingCart,
@@ -78,8 +84,10 @@ mixin _$NavigationRoute {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
-    required TResult Function(NavigationRouteLogin value) navigateToLogin,
+    required TResult Function(NavigationRouteMainLogin value)
+        navigateToMainLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteAccount value) navigateToAccount,
     required TResult Function(NavigationRouteFavorites value)
         navigateToFavorites,
@@ -92,8 +100,9 @@ mixin _$NavigationRoute {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
-    TResult Function(NavigationRouteLogin value)? navigateToLogin,
+    TResult Function(NavigationRouteMainLogin value)? navigateToMainLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteAccount value)? navigateToAccount,
     TResult Function(NavigationRouteFavorites value)? navigateToFavorites,
     TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
@@ -161,8 +170,9 @@ class _$NavigationRouteOnboard implements NavigationRouteOnboard {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() navigateToOnboard,
-    required TResult Function() navigateToLogin,
+    required TResult Function() navigateToMainLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToLogin,
     required TResult Function() navigateToAccount,
     required TResult Function() navigateToFavorites,
     required TResult Function() navigateToShoppingCart,
@@ -175,8 +185,9 @@ class _$NavigationRouteOnboard implements NavigationRouteOnboard {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? navigateToOnboard,
-    TResult Function()? navigateToLogin,
+    TResult Function()? navigateToMainLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToLogin,
     TResult Function()? navigateToAccount,
     TResult Function()? navigateToFavorites,
     TResult Function()? navigateToShoppingCart,
@@ -193,8 +204,10 @@ class _$NavigationRouteOnboard implements NavigationRouteOnboard {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
-    required TResult Function(NavigationRouteLogin value) navigateToLogin,
+    required TResult Function(NavigationRouteMainLogin value)
+        navigateToMainLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteAccount value) navigateToAccount,
     required TResult Function(NavigationRouteFavorites value)
         navigateToFavorites,
@@ -210,8 +223,9 @@ class _$NavigationRouteOnboard implements NavigationRouteOnboard {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
-    TResult Function(NavigationRouteLogin value)? navigateToLogin,
+    TResult Function(NavigationRouteMainLogin value)? navigateToMainLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteAccount value)? navigateToAccount,
     TResult Function(NavigationRouteFavorites value)? navigateToFavorites,
     TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
@@ -230,37 +244,38 @@ abstract class NavigationRouteOnboard implements NavigationRoute {
 }
 
 /// @nodoc
-abstract class $NavigationRouteLoginCopyWith<$Res> {
-  factory $NavigationRouteLoginCopyWith(NavigationRouteLogin value,
-          $Res Function(NavigationRouteLogin) then) =
-      _$NavigationRouteLoginCopyWithImpl<$Res>;
+abstract class $NavigationRouteMainLoginCopyWith<$Res> {
+  factory $NavigationRouteMainLoginCopyWith(NavigationRouteMainLogin value,
+          $Res Function(NavigationRouteMainLogin) then) =
+      _$NavigationRouteMainLoginCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$NavigationRouteLoginCopyWithImpl<$Res>
+class _$NavigationRouteMainLoginCopyWithImpl<$Res>
     extends _$NavigationRouteCopyWithImpl<$Res>
-    implements $NavigationRouteLoginCopyWith<$Res> {
-  _$NavigationRouteLoginCopyWithImpl(
-      NavigationRouteLogin _value, $Res Function(NavigationRouteLogin) _then)
-      : super(_value, (v) => _then(v as NavigationRouteLogin));
+    implements $NavigationRouteMainLoginCopyWith<$Res> {
+  _$NavigationRouteMainLoginCopyWithImpl(NavigationRouteMainLogin _value,
+      $Res Function(NavigationRouteMainLogin) _then)
+      : super(_value, (v) => _then(v as NavigationRouteMainLogin));
 
   @override
-  NavigationRouteLogin get _value => super._value as NavigationRouteLogin;
+  NavigationRouteMainLogin get _value =>
+      super._value as NavigationRouteMainLogin;
 }
 
 /// @nodoc
 
-class _$NavigationRouteLogin implements NavigationRouteLogin {
-  const _$NavigationRouteLogin();
+class _$NavigationRouteMainLogin implements NavigationRouteMainLogin {
+  const _$NavigationRouteMainLogin();
 
   @override
   String toString() {
-    return 'NavigationRoute.navigateToLogin()';
+    return 'NavigationRoute.navigateToMainLogin()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is NavigationRouteLogin);
+    return identical(this, other) || (other is NavigationRouteMainLogin);
   }
 
   @override
@@ -270,30 +285,32 @@ class _$NavigationRouteLogin implements NavigationRouteLogin {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() navigateToOnboard,
-    required TResult Function() navigateToLogin,
+    required TResult Function() navigateToMainLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToLogin,
     required TResult Function() navigateToAccount,
     required TResult Function() navigateToFavorites,
     required TResult Function() navigateToShoppingCart,
     required TResult Function(Fruit fruit) navigateToFruitDetail,
   }) {
-    return navigateToLogin();
+    return navigateToMainLogin();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? navigateToOnboard,
-    TResult Function()? navigateToLogin,
+    TResult Function()? navigateToMainLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToLogin,
     TResult Function()? navigateToAccount,
     TResult Function()? navigateToFavorites,
     TResult Function()? navigateToShoppingCart,
     TResult Function(Fruit fruit)? navigateToFruitDetail,
     required TResult orElse(),
   }) {
-    if (navigateToLogin != null) {
-      return navigateToLogin();
+    if (navigateToMainLogin != null) {
+      return navigateToMainLogin();
     }
     return orElse();
   }
@@ -302,8 +319,10 @@ class _$NavigationRouteLogin implements NavigationRouteLogin {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
-    required TResult Function(NavigationRouteLogin value) navigateToLogin,
+    required TResult Function(NavigationRouteMainLogin value)
+        navigateToMainLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteAccount value) navigateToAccount,
     required TResult Function(NavigationRouteFavorites value)
         navigateToFavorites,
@@ -312,30 +331,31 @@ class _$NavigationRouteLogin implements NavigationRouteLogin {
     required TResult Function(NavigationRouteFruitDetail value)
         navigateToFruitDetail,
   }) {
-    return navigateToLogin(this);
+    return navigateToMainLogin(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
-    TResult Function(NavigationRouteLogin value)? navigateToLogin,
+    TResult Function(NavigationRouteMainLogin value)? navigateToMainLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteAccount value)? navigateToAccount,
     TResult Function(NavigationRouteFavorites value)? navigateToFavorites,
     TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
     TResult Function(NavigationRouteFruitDetail value)? navigateToFruitDetail,
     required TResult orElse(),
   }) {
-    if (navigateToLogin != null) {
-      return navigateToLogin(this);
+    if (navigateToMainLogin != null) {
+      return navigateToMainLogin(this);
     }
     return orElse();
   }
 }
 
-abstract class NavigationRouteLogin implements NavigationRoute {
-  const factory NavigationRouteLogin() = _$NavigationRouteLogin;
+abstract class NavigationRouteMainLogin implements NavigationRoute {
+  const factory NavigationRouteMainLogin() = _$NavigationRouteMainLogin;
 }
 
 /// @nodoc
@@ -379,8 +399,9 @@ class _$NavigationRouteHome implements NavigationRouteHome {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() navigateToOnboard,
-    required TResult Function() navigateToLogin,
+    required TResult Function() navigateToMainLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToLogin,
     required TResult Function() navigateToAccount,
     required TResult Function() navigateToFavorites,
     required TResult Function() navigateToShoppingCart,
@@ -393,8 +414,9 @@ class _$NavigationRouteHome implements NavigationRouteHome {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? navigateToOnboard,
-    TResult Function()? navigateToLogin,
+    TResult Function()? navigateToMainLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToLogin,
     TResult Function()? navigateToAccount,
     TResult Function()? navigateToFavorites,
     TResult Function()? navigateToShoppingCart,
@@ -411,8 +433,10 @@ class _$NavigationRouteHome implements NavigationRouteHome {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
-    required TResult Function(NavigationRouteLogin value) navigateToLogin,
+    required TResult Function(NavigationRouteMainLogin value)
+        navigateToMainLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteAccount value) navigateToAccount,
     required TResult Function(NavigationRouteFavorites value)
         navigateToFavorites,
@@ -428,8 +452,9 @@ class _$NavigationRouteHome implements NavigationRouteHome {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
-    TResult Function(NavigationRouteLogin value)? navigateToLogin,
+    TResult Function(NavigationRouteMainLogin value)? navigateToMainLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteAccount value)? navigateToAccount,
     TResult Function(NavigationRouteFavorites value)? navigateToFavorites,
     TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
@@ -445,6 +470,120 @@ class _$NavigationRouteHome implements NavigationRouteHome {
 
 abstract class NavigationRouteHome implements NavigationRoute {
   const factory NavigationRouteHome() = _$NavigationRouteHome;
+}
+
+/// @nodoc
+abstract class $NavigationRouteLoginCopyWith<$Res> {
+  factory $NavigationRouteLoginCopyWith(NavigationRouteLogin value,
+          $Res Function(NavigationRouteLogin) then) =
+      _$NavigationRouteLoginCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$NavigationRouteLoginCopyWithImpl<$Res>
+    extends _$NavigationRouteCopyWithImpl<$Res>
+    implements $NavigationRouteLoginCopyWith<$Res> {
+  _$NavigationRouteLoginCopyWithImpl(
+      NavigationRouteLogin _value, $Res Function(NavigationRouteLogin) _then)
+      : super(_value, (v) => _then(v as NavigationRouteLogin));
+
+  @override
+  NavigationRouteLogin get _value => super._value as NavigationRouteLogin;
+}
+
+/// @nodoc
+
+class _$NavigationRouteLogin implements NavigationRouteLogin {
+  const _$NavigationRouteLogin();
+
+  @override
+  String toString() {
+    return 'NavigationRoute.navigateToLogin()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is NavigationRouteLogin);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() navigateToOnboard,
+    required TResult Function() navigateToMainLogin,
+    required TResult Function() navigateToHome,
+    required TResult Function() navigateToLogin,
+    required TResult Function() navigateToAccount,
+    required TResult Function() navigateToFavorites,
+    required TResult Function() navigateToShoppingCart,
+    required TResult Function(Fruit fruit) navigateToFruitDetail,
+  }) {
+    return navigateToLogin();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? navigateToOnboard,
+    TResult Function()? navigateToMainLogin,
+    TResult Function()? navigateToHome,
+    TResult Function()? navigateToLogin,
+    TResult Function()? navigateToAccount,
+    TResult Function()? navigateToFavorites,
+    TResult Function()? navigateToShoppingCart,
+    TResult Function(Fruit fruit)? navigateToFruitDetail,
+    required TResult orElse(),
+  }) {
+    if (navigateToLogin != null) {
+      return navigateToLogin();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
+    required TResult Function(NavigationRouteMainLogin value)
+        navigateToMainLogin,
+    required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
+    required TResult Function(NavigationRouteAccount value) navigateToAccount,
+    required TResult Function(NavigationRouteFavorites value)
+        navigateToFavorites,
+    required TResult Function(NavigationRouteShoppingCart value)
+        navigateToShoppingCart,
+    required TResult Function(NavigationRouteFruitDetail value)
+        navigateToFruitDetail,
+  }) {
+    return navigateToLogin(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
+    TResult Function(NavigationRouteMainLogin value)? navigateToMainLogin,
+    TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
+    TResult Function(NavigationRouteAccount value)? navigateToAccount,
+    TResult Function(NavigationRouteFavorites value)? navigateToFavorites,
+    TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
+    TResult Function(NavigationRouteFruitDetail value)? navigateToFruitDetail,
+    required TResult orElse(),
+  }) {
+    if (navigateToLogin != null) {
+      return navigateToLogin(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NavigationRouteLogin implements NavigationRoute {
+  const factory NavigationRouteLogin() = _$NavigationRouteLogin;
 }
 
 /// @nodoc
@@ -488,8 +627,9 @@ class _$NavigationRouteAccount implements NavigationRouteAccount {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() navigateToOnboard,
-    required TResult Function() navigateToLogin,
+    required TResult Function() navigateToMainLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToLogin,
     required TResult Function() navigateToAccount,
     required TResult Function() navigateToFavorites,
     required TResult Function() navigateToShoppingCart,
@@ -502,8 +642,9 @@ class _$NavigationRouteAccount implements NavigationRouteAccount {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? navigateToOnboard,
-    TResult Function()? navigateToLogin,
+    TResult Function()? navigateToMainLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToLogin,
     TResult Function()? navigateToAccount,
     TResult Function()? navigateToFavorites,
     TResult Function()? navigateToShoppingCart,
@@ -520,8 +661,10 @@ class _$NavigationRouteAccount implements NavigationRouteAccount {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
-    required TResult Function(NavigationRouteLogin value) navigateToLogin,
+    required TResult Function(NavigationRouteMainLogin value)
+        navigateToMainLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteAccount value) navigateToAccount,
     required TResult Function(NavigationRouteFavorites value)
         navigateToFavorites,
@@ -537,8 +680,9 @@ class _$NavigationRouteAccount implements NavigationRouteAccount {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
-    TResult Function(NavigationRouteLogin value)? navigateToLogin,
+    TResult Function(NavigationRouteMainLogin value)? navigateToMainLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteAccount value)? navigateToAccount,
     TResult Function(NavigationRouteFavorites value)? navigateToFavorites,
     TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
@@ -598,8 +742,9 @@ class _$NavigationRouteFavorites implements NavigationRouteFavorites {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() navigateToOnboard,
-    required TResult Function() navigateToLogin,
+    required TResult Function() navigateToMainLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToLogin,
     required TResult Function() navigateToAccount,
     required TResult Function() navigateToFavorites,
     required TResult Function() navigateToShoppingCart,
@@ -612,8 +757,9 @@ class _$NavigationRouteFavorites implements NavigationRouteFavorites {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? navigateToOnboard,
-    TResult Function()? navigateToLogin,
+    TResult Function()? navigateToMainLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToLogin,
     TResult Function()? navigateToAccount,
     TResult Function()? navigateToFavorites,
     TResult Function()? navigateToShoppingCart,
@@ -630,8 +776,10 @@ class _$NavigationRouteFavorites implements NavigationRouteFavorites {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
-    required TResult Function(NavigationRouteLogin value) navigateToLogin,
+    required TResult Function(NavigationRouteMainLogin value)
+        navigateToMainLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteAccount value) navigateToAccount,
     required TResult Function(NavigationRouteFavorites value)
         navigateToFavorites,
@@ -647,8 +795,9 @@ class _$NavigationRouteFavorites implements NavigationRouteFavorites {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
-    TResult Function(NavigationRouteLogin value)? navigateToLogin,
+    TResult Function(NavigationRouteMainLogin value)? navigateToMainLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteAccount value)? navigateToAccount,
     TResult Function(NavigationRouteFavorites value)? navigateToFavorites,
     TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
@@ -709,8 +858,9 @@ class _$NavigationRouteShoppingCart implements NavigationRouteShoppingCart {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() navigateToOnboard,
-    required TResult Function() navigateToLogin,
+    required TResult Function() navigateToMainLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToLogin,
     required TResult Function() navigateToAccount,
     required TResult Function() navigateToFavorites,
     required TResult Function() navigateToShoppingCart,
@@ -723,8 +873,9 @@ class _$NavigationRouteShoppingCart implements NavigationRouteShoppingCart {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? navigateToOnboard,
-    TResult Function()? navigateToLogin,
+    TResult Function()? navigateToMainLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToLogin,
     TResult Function()? navigateToAccount,
     TResult Function()? navigateToFavorites,
     TResult Function()? navigateToShoppingCart,
@@ -741,8 +892,10 @@ class _$NavigationRouteShoppingCart implements NavigationRouteShoppingCart {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
-    required TResult Function(NavigationRouteLogin value) navigateToLogin,
+    required TResult Function(NavigationRouteMainLogin value)
+        navigateToMainLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteAccount value) navigateToAccount,
     required TResult Function(NavigationRouteFavorites value)
         navigateToFavorites,
@@ -758,8 +911,9 @@ class _$NavigationRouteShoppingCart implements NavigationRouteShoppingCart {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
-    TResult Function(NavigationRouteLogin value)? navigateToLogin,
+    TResult Function(NavigationRouteMainLogin value)? navigateToMainLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteAccount value)? navigateToAccount,
     TResult Function(NavigationRouteFavorites value)? navigateToFavorites,
     TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,
@@ -846,8 +1000,9 @@ class _$NavigationRouteFruitDetail implements NavigationRouteFruitDetail {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() navigateToOnboard,
-    required TResult Function() navigateToLogin,
+    required TResult Function() navigateToMainLogin,
     required TResult Function() navigateToHome,
+    required TResult Function() navigateToLogin,
     required TResult Function() navigateToAccount,
     required TResult Function() navigateToFavorites,
     required TResult Function() navigateToShoppingCart,
@@ -860,8 +1015,9 @@ class _$NavigationRouteFruitDetail implements NavigationRouteFruitDetail {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? navigateToOnboard,
-    TResult Function()? navigateToLogin,
+    TResult Function()? navigateToMainLogin,
     TResult Function()? navigateToHome,
+    TResult Function()? navigateToLogin,
     TResult Function()? navigateToAccount,
     TResult Function()? navigateToFavorites,
     TResult Function()? navigateToShoppingCart,
@@ -878,8 +1034,10 @@ class _$NavigationRouteFruitDetail implements NavigationRouteFruitDetail {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(NavigationRouteOnboard value) navigateToOnboard,
-    required TResult Function(NavigationRouteLogin value) navigateToLogin,
+    required TResult Function(NavigationRouteMainLogin value)
+        navigateToMainLogin,
     required TResult Function(NavigationRouteHome value) navigateToHome,
+    required TResult Function(NavigationRouteLogin value) navigateToLogin,
     required TResult Function(NavigationRouteAccount value) navigateToAccount,
     required TResult Function(NavigationRouteFavorites value)
         navigateToFavorites,
@@ -895,8 +1053,9 @@ class _$NavigationRouteFruitDetail implements NavigationRouteFruitDetail {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NavigationRouteOnboard value)? navigateToOnboard,
-    TResult Function(NavigationRouteLogin value)? navigateToLogin,
+    TResult Function(NavigationRouteMainLogin value)? navigateToMainLogin,
     TResult Function(NavigationRouteHome value)? navigateToHome,
+    TResult Function(NavigationRouteLogin value)? navigateToLogin,
     TResult Function(NavigationRouteAccount value)? navigateToAccount,
     TResult Function(NavigationRouteFavorites value)? navigateToFavorites,
     TResult Function(NavigationRouteShoppingCart value)? navigateToShoppingCart,

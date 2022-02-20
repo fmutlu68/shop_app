@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/entities/components/button/normal_button_style.dart';
-import 'package:fluttter_shop_app/core/extensions/border_radius_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/theme_extension.dart';
+import '../../entities/components/button/normal_button_style.dart';
+import '../../extensions/border_radius_extension.dart';
+import '../../extensions/theme_extension.dart';
 
 class NormalButton extends StatelessWidget {
   final NormalButtonStyle? style;
   final Widget child;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
   NormalButton({
     Key? key,
     required this.child,

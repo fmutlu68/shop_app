@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/model/fruit.dart';
+import '../../../../model/fruit.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'navigation_route.freezed.dart';
@@ -7,8 +7,10 @@ part 'navigation_route.freezed.dart';
 @freezed
 class NavigationRoute with _$NavigationRoute {
   const factory NavigationRoute.navigateToOnboard() = NavigationRouteOnboard;
-  const factory NavigationRoute.navigateToLogin() = NavigationRouteLogin;
+  const factory NavigationRoute.navigateToMainLogin() =
+      NavigationRouteMainLogin;
   const factory NavigationRoute.navigateToHome() = NavigationRouteHome;
+  const factory NavigationRoute.navigateToLogin() = NavigationRouteLogin;
   const factory NavigationRoute.navigateToAccount() = NavigationRouteAccount;
   const factory NavigationRoute.navigateToFavorites() =
       NavigationRouteFavorites;
@@ -21,13 +23,14 @@ class NavigationRoute with _$NavigationRoute {
 extension NavigationPathExtension on NavigationRoute {
   String get path {
     return this.when<String>(
-      navigateToLogin: () => "/mainlogin",
+      navigateToMainLogin: () => "/mainlogin",
       navigateToOnboard: () => "/onboard",
       navigateToFruitDetail: (_) => "/fruitdetail",
       navigateToHome: () => "/home",
       navigateToShoppingCart: () => "/cart",
       navigateToFavorites: () => "/favorites",
       navigateToAccount: () => "/account",
+      navigateToLogin: () => "/login",
     );
   }
 }

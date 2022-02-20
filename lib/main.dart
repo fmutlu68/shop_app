@@ -1,15 +1,15 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/start/cache/local_cache_manager.dart';
-import 'package:fluttter_shop_app/core/start/dependency_injection/dependency_injection_container.dart';
-import 'package:fluttter_shop_app/core/start/navigation/router/navigation_router.dart';
-import 'package:fluttter_shop_app/core/start/navigation/service/navigation_service.dart';
-import 'package:fluttter_shop_app/core/start/notifier/ProviderInitializer.dart';
-import 'package:fluttter_shop_app/core/start/theme/theme_notifier.dart';
-import 'package:fluttter_shop_app/core/start/theme/themes/dark_theme.dart';
-import 'package:fluttter_shop_app/core/start/theme/themes/light_theme.dart';
-import 'package:fluttter_shop_app/view/home/fruits/view/fruits_view.dart';
+import 'core/start/cache/local_cache_manager.dart';
+import 'core/start/dependency_injection/dependency_injection_container.dart';
+import 'core/start/navigation/router/navigation_router.dart';
+import 'core/start/navigation/service/navigation_service.dart';
+import 'core/start/notifier/ProviderInitializer.dart';
+import 'core/start/theme/theme_notifier.dart';
+import 'core/start/theme/themes/dark_theme.dart';
+import 'core/start/theme/themes/light_theme.dart';
+import 'view/authenticate/main_login/view/login_view.dart';
 import 'package:provider/provider.dart';
 
 // import 'core/utils/console_printer.dart';
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Shop App',
-      home: FruitsView(),
+      home: MainLoginView(),
       onGenerateRoute: NavigationRouter.instance.generateRoute,
       navigatorKey: NavigationService.shared.navigationKey,
       theme: LightTheme.instance.theme,

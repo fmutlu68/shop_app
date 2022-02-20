@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/base/model/base_view_model.dart';
-import 'package:fluttter_shop_app/production/providers/user_notifier.dart';
-import 'package:fluttter_shop_app/view/home/account/model/account_view_choice_item.dart';
+import '../../../../core/base/model/base_view_model.dart';
+import '../../../../production/providers/user_notifier.dart';
+import '../model/account_view_choice_item.dart';
 import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
 part 'account_view_model.g.dart';

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:fluttter_shop_app/core/base/state/base_view_state.dart';
-import 'package:fluttter_shop_app/core/base/widget/base_view.dart';
-import 'package:fluttter_shop_app/core/components/button/impl/text_button.dart';
-import 'package:fluttter_shop_app/core/components/list_view/indicator_list_view.dart';
-import 'package:fluttter_shop_app/core/entities/components/button/style_types/text_button_style.dart';
-import 'package:fluttter_shop_app/core/extensions/dynamic_size_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/spacer_extension.dart';
-import 'package:fluttter_shop_app/core/extensions/theme_extension.dart';
-import 'package:fluttter_shop_app/production/enum/app_colors_enum.dart';
-import 'package:fluttter_shop_app/view/authenticate/onboard/view_model/onboard_view_model.dart';
+import '../../../../core/base/state/base_view_state.dart';
+import '../../../../core/base/widget/base_view.dart';
+import '../../../../core/components/button/impl/text_button.dart';
+import '../../../../core/components/list_view/indicator_list_view.dart';
+import '../../../../core/entities/components/button/style_types/text_button_style.dart';
+import '../../../../core/extensions/dynamic_size_extension.dart';
+import '../../../../core/extensions/spacer_extension.dart';
+import '../../../../core/extensions/theme_extension.dart';
+import '../../../../production/enum/app_colors_enum.dart';
+import '../view_model/onboard_view_model.dart';
 
 part '../components/onboard_image_view.dart';
 part '../components/onboard_list_indicator.dart';

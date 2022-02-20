@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/core/extensions/dynamic_size_extension.dart';
+import 'dynamic_size_extension.dart';
 
 extension SpacerExtension on BuildContext {
   SizedBox get veryLowHeightSpacer => SizedBox(

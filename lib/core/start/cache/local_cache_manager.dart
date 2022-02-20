@@ -1,4 +1,4 @@
-import 'package:fluttter_shop_app/core/start/cache/ILocalCacheManager.dart';
+import 'ILocalCacheManager.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LocalCacheManager extends ILocalCacheManager {

@@ -1,7 +1,7 @@
-import 'package:fluttter_shop_app/core/base/services/base_color_service.dart';
-import 'package:fluttter_shop_app/core/start/navigation/service/INavigationService.dart';
-import 'package:fluttter_shop_app/core/start/navigation/service/navigation_service.dart';
-import 'package:fluttter_shop_app/production/services/color_service.dart';
+import '../../base/services/base_color_service.dart';
+import '../navigation/service/INavigationService.dart';
+import '../navigation/service/navigation_service.dart';
+import '../../../production/services/color_service.dart';
 import 'package:get_it/get_it.dart';
 
 final GetIt _injectionContainer = GetIt.instance;

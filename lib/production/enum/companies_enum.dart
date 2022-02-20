@@ -1,4 +1,4 @@
-import 'package:fluttter_shop_app/production/constants/app_path_constants.dart';
+import '../constants/app_path_constants.dart';
 
 enum Companies { FACEBOOK, GOOGLE }
 

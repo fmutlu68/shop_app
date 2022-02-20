@@ -1,4 +1,4 @@
-import 'package:fluttter_shop_app/core/start/navigation/routes/navigation_route.dart';
+import '../../core/start/navigation/routes/navigation_route.dart';
 
 enum FruitsMenuPage { Favorites, ShoppingCart, Account }
 

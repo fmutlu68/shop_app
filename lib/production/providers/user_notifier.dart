@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_shop_app/model/user.dart';
+import '../../model/user.dart';
 
 class UserNotifier extends ChangeNotifier {
   User? loginedUser = User(
@@ -11,7 +11,7 @@ class UserNotifier extends ChangeNotifier {
     address: "Konya Türkiye",
   );
 
-  void loginUser(User userToLogin) {
+  void setUser(User userToLogin) {
     loginedUser = userToLogin;
   }
 

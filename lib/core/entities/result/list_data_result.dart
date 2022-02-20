@@ -1,5 +1,6 @@
 import 'package:vexana/vexana.dart';
-import 'package:fluttter_shop_app/core/entities/result/data_result.dart';
+
+import 'data_result.dart';
 
 class ListDataResult<T extends INetworkModel>
     extends INetworkModel<DataResult<List<T>>> {
